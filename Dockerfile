@@ -46,4 +46,5 @@ EXPOSE 8888
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
 # ENV LD_LIBRARY_PATH=/workspace/volume/pyBadlands/pyBadlands/libUtils:/build/pyBadlands/pyBadlands/libUtils
-# CMD /build/run.sh
+CMD jupyter notebook --ip=0.0.0.0 --no-browser \
+    --NotebookApp.token='' --allow-root --NotebookApp.iopub_data_rate_limit=1.0e10
